@@ -8,7 +8,7 @@ VIDEO_FOLDER_PATH = 'path\\to\\folder'
 
 def get_video_format(video_path):
     _, ext = os.path.splitext(video_path)
-    return ext.lower()[1:]  # Remove the leading dot and convert to lowercase
+    return ext.lower()[1:] 
 
 def stream_video(video_path):
     stream_url = f'rtmp://a.rtmp.youtube.com/live2/{STREAM_KEY}'
@@ -19,7 +19,7 @@ def stream_video(video_path):
         print(f"Unsupported format: {video_format}")
         return
 
-    # Use h264 as the video encoder
+    # Uses h264 as the video encoder
     command = [
         'ffmpeg',
         '-re',
