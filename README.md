@@ -17,22 +17,32 @@ This Python script enables easy streaming of videos from a local folder directly
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/youtube-folder-streamer.git
+    git clone https://github.com/ghosty-tongue/youtube-folder-streamer.git
     ```
 
-2. Set your YouTube Live stream key in the script.
+2. Set your YouTube Live stream key in the `main.py` file:
 
-3. Place your video files in the specified folder.
+    ```python
+    # Replace 'YOUR_STREAM_KEY' with your actual YouTube Live stream key
+    STREAM_KEY = 'YOUR_STREAM_KEY'
+    ```
+
+3. Place your video files in the specified folder (`videos/` by default).
 
 4. Run the script to start streaming:
 
     ```bash
-    python youtube_folder_streamer.py
+    python main.py
     ```
 
 ## Configuration
 
-Edit the `youtube_folder_streamer.py` file to configure stream settings such as video quality, audio bitrate, and more.
+Edit the `main.py` file to configure stream settings such as video quality, audio bitrate, and more.
+
+## Advanced Usage
+
+- You can customize the video folder path by modifying the `VIDEO_FOLDER_PATH` variable in the script.
+- Adjust other settings in the script based on your preferences.
 
 ## Contribution
 
