@@ -18,7 +18,7 @@ def stream_video(video_path, loop):
         print(f"Unsupported format: {video_format}")
         return
         
-# Comments are left on ffmpeg commands for people who don't have any knowledge on ffmpeg and there commands.
+# Comments are left on ffmpeg commands for people who don't have any knowledge on ffmpeg commands.
     command = [
         'ffmpeg',
         '-re',
