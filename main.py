@@ -23,15 +23,15 @@ def stream_video(video_path, loop):
         'ffmpeg',
         '-re',
         '-i', video_path,
-        '-c:v', 'h264',        # Video codec
-        '-preset', 'ultrafast',# Video preset for speed
+        '-c:v', 'h264',        # Video codec  (Importent this command should not be mess with unless you know what you are doing.)
+        '-preset', 'ultrafast',# Video preset for speed  (Importent this command should not be mess with unless you know what you are doing.)
         '-b:v', '1500k',       # Video bitrate
         '-s', '1280x720',      # Video resolution
         '-r', '30',            # Frame rate
-        '-c:a', 'aac',         # Audio codec
-        '-ar', '44100',        # Audio sample rate
+        '-c:a', 'aac',         # Audio codec  (Importent this command should not be mess with unless you know what you are doing.)
+        '-ar', '44100',        # Audio sample rate  (Importent this command should not be mess with unless you know what you are doing.)
         '-b:a', '320k',        # Audio bitrate
-        '-f', 'flv',           # Output format (Don't mess with this command unless you want to have a shitty youtube live stream)
+        '-f', 'flv',           # Output format (Importent this command should not be mess with unless you know what you are doing.)
         stream_url
     ]
 
