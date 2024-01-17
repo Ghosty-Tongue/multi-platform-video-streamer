@@ -31,7 +31,7 @@ def stream_video(video_path, loop):
         '-c:a', 'aac',         # Audio codec
         '-ar', '44100',        # Audio sample rate
         '-b:a', '320k',        # Audio bitrate
-        '-f', 'flv',           # Output format
+        '-f', 'flv',           # Output format (Don't mess with this command unless you want to have a shitty youtube live stream)
         stream_url
     ]
 
