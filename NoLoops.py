@@ -1,3 +1,5 @@
+# No loops means it won't look the videos when it hits the end of the queue.
+
 import os
 import time
 import ffmpeg
@@ -19,7 +21,7 @@ def stream_video(video_path):
         print(f"Unsupported format: {video_format}")
         return
 
-    # Uses h264 as the video encoder
+    # Da encoder yeahhhh
     command = [
         'ffmpeg',
         '-re',
@@ -32,7 +34,7 @@ def stream_video(video_path):
         '-c:a', 'aac',
         '-ar', '44100',
         '-b:a', '320k',
-        '-f', 'flv',  # Force output to FLV for RTMP streaming
+        '-f', 'flv',  # Dont change if you want to fuck up the output feed.
         stream_url
     ]
 
