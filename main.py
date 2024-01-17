@@ -25,12 +25,12 @@ def stream_video(video_path, loop):
         '-i', video_path,
         '-c:v', 'h264',        # Video codec  (Importent this command should not be mess with unless you know what you are doing.)
         '-preset', 'ultrafast',# Video preset for speed  (Importent this command should not be mess with unless you know what you are doing.)
-        '-b:v', '1500k',       # Video bitrate
+        '-b:v', '1500k',       # Video bitrate  (Importent this command should not be mess with unless you know what you are doing.)
         '-s', '1280x720',      # Video resolution
         '-r', '30',            # Frame rate
         '-c:a', 'aac',         # Audio codec  (Importent this command should not be mess with unless you know what you are doing.)
         '-ar', '44100',        # Audio sample rate  (Importent this command should not be mess with unless you know what you are doing.)
-        '-b:a', '320k',        # Audio bitrate
+        '-b:a', '320k',        # Audio bitrate  (Importent this command should not be mess with unless you know what you are doing.)
         '-f', 'flv',           # Output format (Importent this command should not be mess with unless you know what you are doing.)
         stream_url
     ]
