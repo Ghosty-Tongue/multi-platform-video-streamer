@@ -1,6 +1,10 @@
+# Loops means it will loop the videos when it hits the end of the queue.
+
 import os
 import time
+import ffmpeg
 
+# Replace 'YOUR_STREAM_KEY' with your actual YouTube Live stream key
 STREAM_KEY = 'YOUR_STREAM_KEY'
 VIDEO_FOLDER_PATH = 'path\\to\\folder'
 
@@ -29,7 +33,7 @@ def stream_video(video_path):
         '-c:a', 'aac',
         '-ar', '44100',
         '-b:a', '320k',
-        '-f', 'flv',
+        '-f', 'flv', # Don't fucking change this or else the output will go to shit
         stream_url
     ]
 
