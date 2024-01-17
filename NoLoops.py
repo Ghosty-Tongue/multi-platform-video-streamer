@@ -1,4 +1,4 @@
-# No loops means it won't look the videos when it hits the end of the queue.
+# No loops means it won't loop the videos when it hits the end of the queue.
 
 import os
 import time
