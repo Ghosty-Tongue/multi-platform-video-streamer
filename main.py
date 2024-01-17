@@ -17,7 +17,8 @@ def stream_video(video_path, loop):
     if video_format not in ['flv', 'mov', 'mp4']:
         print(f"Unsupported format: {video_format}")
         return
-
+# Comments are left on ffmpeg commands for people who don't have any knowledge on ffmpeg and there commands.
+    
     command = [
         'ffmpeg',
         '-re',
