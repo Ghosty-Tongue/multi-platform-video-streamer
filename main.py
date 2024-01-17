@@ -21,7 +21,7 @@ def stream_video(video_path, loop):
     command = [
         'ffmpeg',
         '-re',
-        '-i', video_path,      # Input file
+        '-i', video_path,
         '-c:v', 'h264',        # Video codec
         '-preset', 'ultrafast',# Video preset for speed
         '-b:v', '1500k',       # Video bitrate
