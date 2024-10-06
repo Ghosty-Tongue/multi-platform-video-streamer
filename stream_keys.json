@@ -1,0 +1,6 @@
+{
+  "youtube": "YOUR_YOUTUBE_STREAM_KEY",
+  "twitch": "YOUR_TWITCH_STREAM_KEY",
+  "kick_url": "YOUR_KICK_STREAM_URL",
+  "kick_key": "YOUR_KICK_STREAM_KEY"
+}
