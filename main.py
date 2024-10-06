@@ -3,7 +3,7 @@ import time
 import json
 import subprocess
 import tkinter as tk
-from tkinter import messagebox, filedialog
+from tkinter import messagebox
 
 STREAM_KEYS_FILE = 'stream_keys.json'
 VIDEO_FOLDER_PATH = 'path/to/folder'
@@ -38,7 +38,6 @@ def stream_video(video_path, stream_keys, loop=False):
     ]
 
     streams = []
-
     if stream_keys.get('youtube'):
         streams.append(f"[f=flv:onfail=ignore]rtmp://a.rtmp.youtube.com/live2/{stream_keys['youtube']}")
     if stream_keys.get('twitch'):
@@ -53,7 +52,10 @@ def stream_video(video_path, stream_keys, loop=False):
         if loop:
             command.extend(['-stream_loop', '-1'])
 
-        process = subprocess.Popen(' '.join(command), shell=True)
+        try:
+            process = subprocess.Popen(' '.join(command), shell=True)
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to start streaming: {e}")
 
 def edit_stream_keys():
     def save_keys():
